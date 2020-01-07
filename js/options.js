@@ -18,6 +18,10 @@ $(function(){
     var col_7_val = $("#col_7").val();  
     var awsid_8_val = $("#awsid_8").val();
     var col_8_val = $("#col_8").val(); 
+    var awsid_9_val = $("#awsid_9").val();
+    var col_9_val = $("#col_9").val();  
+    var awsid_10_val = $("#awsid_10").val();
+    var col_10_val = $("#col_10").val(); 
     var formOptions = {
       awsid_1: awsid_1_val,
       col_1: col_1_val,
@@ -34,7 +38,11 @@ $(function(){
       awsid_7: awsid_7_val,
       col_7: col_7_val,
       awsid_8: awsid_8_val,
-      col_8: col_8_val
+      col_8: col_8_val,
+      awsid_9: awsid_9_val,
+      col_9: col_9_val,
+      awsid_10: awsid_10_val,
+      col_10: col_10_val
     };
     chrome.storage.sync.set(formOptions, function(){});
   });
@@ -55,7 +63,11 @@ $(function(){
     awsid_7: "",
     col_7: "",
     awsid_8: "",
-    col_8: ""
+    col_8: "",
+    awsid_9: "",
+    col_9: "",
+    awsid_10: "",
+    col_10: ""
   };  
   //chrome.storageからオプション画面の初期値を設定する
   chrome.storage.sync.get(
@@ -77,5 +89,9 @@ $(function(){
     if (items.col_7) $("#col_7").val(items.col_7);
     if (items.awsid_8) $("#awsid_8").val(items.awsid_8);
     if (items.col_8) $("#col_8").val(items.col_8);
+    if (items.awsid_9) $("#awsid_9").val(items.awsid_9);
+    if (items.col_9) $("#col_9").val(items.col_9);
+    if (items.awsid_10) $("#awsid_10").val(items.awsid_10);
+    if (items.col_10) $("#col_10").val(items.col_10);
   })
 });

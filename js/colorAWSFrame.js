@@ -14,7 +14,11 @@ var defaults = {
   awsid_7: "awsid_7",
   col_7: "col_7",
   awsid_8: "awsid_8",
-  col_8: "col_8"
+  col_8: "col_8",
+  awsid_9: "awsid_9",
+  col_9: "col_9",
+  awsid_10: "awsid_10",
+  col_10: "col_10"
 };
 
 chrome.storage.sync.get(
@@ -44,6 +48,11 @@ chrome.storage.sync.get(
     var background_8 = items.col_8;
     var account_8 = items.awsid_8;
   
+    var background_9 = items.col_9;
+    var account_9 = items.awsid_9;
+
+    var background_10 = items.col_10;
+    var account_10 = items.awsid_10;
     //アカウント取得
     var account = getAccount();
   
@@ -71,6 +80,12 @@ chrome.storage.sync.get(
     }
     if (account === account_8){
       changeConsoleColor(background_8)
+    }
+    if (account === account_9){
+      changeConsoleColor(background_9)
+    }
+    if (account === account_10){
+      changeConsoleColor(background_10)
     }
   }
 );
